@@ -2,126 +2,254 @@
 <html lang="pt-br">
 
 <head>
+    <!-- Configurações básicas -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>DevGui | Portfólio</title>
+
+    <title>Guilherme Silva | Back-end & Full Stack</title>
+
+    <!-- Fonte moderna -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome (Ícones) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="particulas">
+    <!-- ================= HEADER ================= -->
+    <header class="header">
 
-    </div>
+        <div class="logo">GS</div>
 
-    <nav class="navegacao">
-        <ul class="menu">
-            <li><a href="#inicio" class="menu-link">Início</a></li>
-            <li><a href="#sobre" class="menu-link">Sobre</a></li>
-            <li><a href="#projetos" class="menu-link">Projetos</a></li>
-            <li><a href="#contatos" class="menu-link">Contatos</a></li>
-        </ul>
-    </nav>
+        <!-- Botão hambúrguer (só aparece no mobile) -->
+        <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-    <main id="inicio" class="cabecalho">
-        <img src="./img/guilherme.png" alt="Foto de Guilherme Silva" class="foto-perfil">
-        <h1>Guilherme Silva</h1>
-        <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack</p>
-    </main>
+        <!-- Nav desktop e mobile (no mobile vira drawer) -->
+        <nav class="nav" id="menu">
+            <a href="#hero">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
 
+    </header>
+
+    <!-- Overlay (escurece o fundo quando o menu abre no mobile) -->
+    <div class="overlay"></div>
+
+    <!-- ================= HERO ================= -->
+    <section id="hero" class="hero">
+
+        <div class="hero-texto reveal">
+
+            <h1>Olá, eu sou <span>Guilherme Silva</span></h1>
+
+            <!-- Efeito digitando vai aparecer aqui -->
+            <h2 class="cargo"></h2>
+
+            <p>
+                Desenvolvedor Back-end & Full Stack em formação — focado em construir soluções eficientes,
+                seguras e escaláveis.
+            </p>
+
+            <div class="hero-botoes">
+                <a href="#projetos" class="btn-primario">Ver Projetos</a>
+                <a href="#contato" class="btn-secundario">Contato</a>
+            </div>
+
+        </div>
+
+        <!-- FOTO -->
+        <div class="hero-foto reveal">
+            <img src="./img/guilherme.png" alt="Foto de Guilherme Silva">
+        </div>
+
+    </section>
+
+    <!-- ================= SOBRE ================= -->
     <section id="sobre" class="sobre">
-        <h2 class="sobre-titulo">Sobre Mim</h2>
 
-        <div class="sobre-caixa">
+        <h2 class="reveal">Sobre Mim</h2>
+
+        <div class="sobre-texto reveal">
             <p>
-                Sou um Desenvolvedor Full Stack e estudante de Análise e Desenvolvimento de Sistemas, com formação em
-                Redes de Computadores.
+                Sou estudante de Análise e Desenvolvimento de Sistemas, com formação técnica em Redes de Computadores e
+                certificação em Engenharia de Qualidade de Software pela CESAR School.
             </p>
 
             <p>
-                Minha jornada na tecnologia começou pela infraestrutura, onde desenvolvi uma base sólida em protocolos
-                de rede, segurança, comunicação entre sistemas e resolução de problemas — base que hoje aplico na
-                criação de aplicações completas.
+                Tenho base sólida em desenvolvimento backend e banco de dados, trabalhando com Python, Java e SQL na
+                construção de sistemas organizados, funcionais e bem estruturados. Minha experiência profissional em
+                suporte e infraestrutura me proporciona uma visão completa da tecnologia — desde o funcionamento da rede
+                até a aplicação final.
             </p>
 
             <p>
-                Gosto de criar soluções eficientes, escaláveis e intuitivas. Tenho facilidade para aprender novas
-                tecnologias e trabalhar em projetos que envolvem lógica, design, experiência do usuário e boas práticas
-                de arquitetura.
+                Busco evoluir como desenvolvedor, construindo soluções eficientes, seguras e orientadas a boas práticas.
+                Acredito em disciplina, aprendizado contínuo e melhoria constante como pilares para crescer na área de
+                tecnologia.
             </p>
+        </div>
+
+    </section>
+
+    <!-- ================= TECNOLOGIAS ================= -->
+    <section id="tecnologias" class="tecnologias">
+
+        <h2 class="reveal">Tecnologias</h2>
+
+        <div class="tech-grid">
+
+            <div class="tech-card reveal">
+                <i class="fa-brands fa-html5"></i>
+                <p>HTML5</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <i class="fa-brands fa-css3-alt"></i>
+                <p>CSS3</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <i class="fa-brands fa-js"></i>
+                <p>JavaScript</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <i class="fa-brands fa-git-alt"></i>
+                <p>Git</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <i class="fa-brands fa-java"></i>
+                <p>Java</p>
+            </div>
+
+            <div class="tech-card reveal">
+                <i class="fa-solid fa-database"></i>
+                <p>SQL</p>
+            </div>
+
         </div>
     </section>
 
+    <!-- ================= PROJETOS ================= -->
     <section id="projetos" class="projetos">
-        <h2 class="projetos-titulo">Meus Projetos</h2>
 
-        <div class="projetos-caixa">
+        <h2 class="reveal">Projetos</h2>
 
-            <div class="projetos-card">
-                <img src="./img/projeto1.png" alt="Projeto 1" class="projeto-imagem">
-                <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Loja de Carros</h3>
-                    <p class="paragrafo-projetos">Loja virtual moderna com animações suaves e design responsivo para uma
-                        loja de carros de luxo.</p>
+        <div class="projetos-grid">
+
+            <!-- Projeto 1 -->
+            <article class="projeto-card reveal">
+                <img src="./img/projeto1.png" alt="Agência de Carros Virtual">
+                <div class="projeto-info">
+                    <h3>Agência de Carros Virtual</h3>
+                    <p>Landing page responsiva com vitrine de veículos, layout moderno e navegação fluida.</p>
+
+                    <div class="projeto-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+
+                    <div class="projeto-botoes">
+                        <a href="#" class="btn-primario" target="_blank" rel="noopener">Ver Online</a>
+                        <a href="#" class="btn-secundario" target="_blank" rel="noopener">GitHub</a>
+                    </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="projetos-card">
-                <img src="./img/projeto2.png" alt="Projeto 2" class="projeto-imagem">
-                <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Agência de Viagem</h3>
-                    <p class="paragrafo-projetos">Página interativa com roteiros de viagem mais cobiçados do mundo.</p>
-                </div>
-            </div>
+            <!-- Projeto 2 -->
+            <article class="projeto-card reveal">
+                <img src="./img/projeto2.png" alt="Agência de Viagem">
+                <div class="projeto-info">
+                    <h3>Agência de Viagem</h3>
+                    <p>Site com foco em experiências e destinos, cards bem organizados e design profissional.</p>
 
-            <div class="projetos-card">
-                <img src="./img/animes.jpg" alt="Projeto 3" class="projeto-imagem">
-                <div class="caixa-textos-projetos">
-                    <h3 class="info-projetos">Loja de Animes</h3>
-                    <p class="paragrafo-projetos">Loja virtual com iteis de colecionador com os animes mais procurado da
-                        atualidade.</p>
+                    <div class="projeto-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Responsivo</span>
+                    </div>
+
+                    <div class="projeto-botoes">
+                        <a href="#" class="btn-primario" target="_blank" rel="noopener">Ver Online</a>
+                        <a href="#" class="btn-secundario" target="_blank" rel="noopener">GitHub</a>
+                    </div>
                 </div>
-            </div>
+            </article>
+
+            <!-- Projeto 3 -->
+            <article class="projeto-card reveal">
+                <img src="./img/animes.jpg" alt="Loja de Anime">
+                <div class="projeto-info">
+                    <h3>Loja de Anime</h3>
+                    <p>Vitrine de itens colecionáveis com visual moderno, destaques e chamadas para ação.</p>
+
+                    <div class="projeto-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>UI</span>
+                    </div>
+
+                    <div class="projeto-botoes">
+                        <a href="#" class="btn-primario" target="_blank" rel="noopener">Ver Online</a>
+                        <a href="#" class="btn-secundario" target="_blank" rel="noopener">GitHub</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section id="contato" class="contato">
+        <h2 class="reveal">Contato</h2>
+        <p class="reveal">Vamos transformar sua ideia em projeto?</p>
+
+        <div class="contato-links">
+
+            <a class="reveal" href="https://wa.me/5581992174567" target="_blank" rel="noopener">
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+            </a>
+
+            <a class="reveal" href="https://github.com/e0guy" target="_blank" rel="noopener">
+                <i class="fa-brands fa-github"></i>
+                GitHub
+            </a>
+
+            <a class="reveal" href="https://www.linkedin.com/in/devguilherme-silva/" target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin"></i>
+                LinkedIn
+            </a>
+
+            <a class="reveal" href="mailto:e0devgui@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                Email
+            </a>
 
         </div>
     </section>
 
-    <section id="contatos" class="contatos">
-        <h2 class="contatos-titulo">Entre em Contato</h2>
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <p>© 2026 Guilherme Silva - Todos os direitos reservados</p>
+    </footer>
 
-        <form class="formulario-contato" id="formulario" onsubmit="enviarWhats(event)">
-            <div class="grupo-form">
-                <input placeholder="Nome" class="campo-form" id="Nome">
-            </div>
-
-            <div class="grupo-form">
-                <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="6" id="mensagem"></textarea>
-            </div>
-
-            <button type="submit" class="botao-form">Enviar WhatsApp</button>
-        </form>
-
-    </section>
-
-  <script>
-    function enviarWhats(event) {
-        event.preventDefault();
-
-        const nome = document.getElementById('Nome').value;
-        const mensagem = document.getElementById('mensagem').value;
-
-        const texto = `Olá, meu nome é ${nome}. Mensagem: ${mensagem}`;
-        const msgFormata = encodeURIComponent(texto);
-
-        const telefone = "5581992174567";
-
-        const url = `https://wa.me/${telefone}?text=${msgFormata}`;
-
-        window.open(url, '_blank');
-    }
-</script>
-
-
+    <!-- JS -->
+    <script src="script.js"></script>
 
 </body>
 
