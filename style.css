@@ -77,18 +77,18 @@ body {
 }
 
 /* ================= HERO ================= */
-.hero {
-    min-height: 100vh;
+.hero{
+    min-height: calc(100vh - 90px); /* desconta o header */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-    padding: 0 8%;
-    padding-top: 110px; /* evita ficar embaixo do header */
+    align-items: center;            /* centraliza vertical */
+    justify-content: space-between; /* texto esquerda / foto direita */
+    gap: 48px;
+
+    padding: 40px 8% 60px; /* menos vazio em cima, mais proporcional */
 }
 
 .hero-texto {
-    max-width: 560px;
+    max-width: 620px;
 }
 
 .hero-texto h1 {
@@ -115,10 +115,16 @@ body {
 
 /* Botões */
 .hero-botoes {
-    margin-top: 25px;
+    margin-top: 22px;
     display: flex;
-    gap: 15px;
+    gap: 14px;
     flex-wrap: wrap;
+}
+
+.hero-botoes a{
+    width: auto;
+    min-width: 170px;
+    text-align: center;
 }
 
 .btn-primario, .btn-secundario {
@@ -294,6 +300,14 @@ body {
     color: #a5f3fc;
 }
 
+/* botões dos projetos */
+.projeto-botoes{
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+}
+
 /* ================= CONTATO ================= */
 .contato p{
     color: #94a3b8;
@@ -394,17 +408,33 @@ body {
     .hero{
         flex-direction: column;
         text-align: center;
+        justify-content: center;
         gap: 26px;
-        padding: 0 6%;
-        padding-top: 110px;
+        padding: 110px 6% 56px; /* topo por causa do header fixo */
+        min-height: auto;
+    }
+
+    .hero-texto{
+        max-width: 720px;
     }
 
     .hero-texto h1{
         font-size: 38px;
     }
 
+    /* botões no mobile ficam organizados e proporcionais */
     .hero-botoes{
         justify-content: center;
+        display: grid;
+        gap: 12px;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-botoes a{
+        width: 100%;
+        min-width: 0;
     }
 
     .hero-foto img{
@@ -414,16 +444,5 @@ body {
 
     .sobre, .tecnologias, .contato, .projetos{
         padding: 70px 6%;
-    }
-}
-
-@media (max-width: 420px){
-    .hero-texto h1{
-        font-size: 32px;
-    }
-
-    .btn-primario, .btn-secundario{
-        width: 100%;
-        text-align: center;
     }
 }
